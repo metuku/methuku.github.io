@@ -4,7 +4,7 @@ description: ""
 meta_description: ""
 logo: '/assets/img/logos/methuku.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: 'https://methuku.github.io'
+baseurl: ''
 url: 'https://methuku.com'
 email: 'hello@methukumail.com'
 google_analytics: 'UA-178018885-1'
