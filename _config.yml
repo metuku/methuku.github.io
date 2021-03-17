@@ -1,46 +1,37 @@
-# Site
-name: 'Methuku'
-description: 'రాజు ప్రకృతి వ్యవసాయ క్షేత్రం | Subscribe to our Desi Rice & Vegitables | Heirloom Seeds | Consistent Pricing'
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.png'
+name: "Methuku"
+title: "Methuku"
+description: ""
+meta_description: ""
+logo: '/assets/img/logos/methuku.png'
+favicon: 'assets/images/favicon.ico'
 baseurl: ''
-avatar: 'assets/images/sal.jpg'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+url: 'https://methuku.com'
+email: 'hello@methukumail.com'
+google_analytics: 'UA-178018885-1'
 
-include: ["_pages"]
-permalink: /:title/
-
-# Plugins
 plugins: 
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-seo-tag
- 
-# Defaults
-defaults:
+  - jekyll-archives
 
-  # all posts
-  - scope:
-      path: "_posts"
-    values:
-      layout: post
-      
-  # all pages
-  - scope:
-      path: "_pages"
-    values:
-      layout: page
-      
-      
-# Syntax
+sass:
+  style: compressed
+        
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
 markdown: kramdown
 highlighter: rouge
 
-# Pagination
-paginate: 20
-
-
-# Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

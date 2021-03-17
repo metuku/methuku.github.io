@@ -1,0 +1,33 @@
+---
+layout: default
+permalink: /sitemap
+---
+<main id="content" role="main">
+	<div class="container space-1 space-top-3">
+		<div>
+			<h1 class="h5 mb-0">XML Sitemap</h1>
+		</div>
+	</div>
+</main>
+<div class="container table-responsive-sm space-2">
+	<table class="table" id="sitemap">
+		<thead>
+			<tr>
+				<th scope="col">URL</th>
+				<th scope="col" title="Last Modification Time">Last Mod.</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for page in site.pages %}
+			{% if page.sitemap %}
+			<tr>
+				<td>
+					<a href="{{ page.canonical_url }}">{{ page.canonical_url }}</a>
+				</td>
+				<td>{{ page.date | date_to_long_string }} </td>
+			</tr>
+			{% endif %}
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
