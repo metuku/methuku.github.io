@@ -10,8 +10,6 @@
 ## RUN
 
 ```bash
-cd wsrepo/methuku/
-
 docker-compose up -d
 ```
 
